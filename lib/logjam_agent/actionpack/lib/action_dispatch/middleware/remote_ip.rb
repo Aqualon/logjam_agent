@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # As the name suggests, still is a copy of the rails/actionpack remote_ip middleware
 # It's duplicated here, in case it's not already available (e.g. in older rails versions),
 # because we don't want to add actionpack as dependecy.

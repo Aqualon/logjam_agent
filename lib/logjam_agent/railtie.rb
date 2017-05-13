@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'logjam_agent'
 
 module LogjamAgent

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module LogjamAgent
   module Util
     # copied from amqp protocol gem (slightly modified)
