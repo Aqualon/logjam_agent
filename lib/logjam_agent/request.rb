@@ -79,7 +79,8 @@ module LogjamAgent
           end
           return
         end
-        message = message.strip
+        message = message.dup if message.frozen?
+        message.strip!
         line_too_long = message.size > @max_line_length
         if line_too_long && severity < Logger::ERROR
           message[(@max_line_length-21)..-1] = " ... [LINE TRUNCATED]"

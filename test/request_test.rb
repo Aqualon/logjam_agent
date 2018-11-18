@@ -44,6 +44,12 @@ module LogjamAgent
       assert_equal TRUNCATED_LINE, lines(@request)[1][2]
     end
 
+    def test_strips_whitespace_from_frozen_strings
+      @request.add_line(Logger::INFO, Time.now, " xyz ".freeze)
+      assert_equal 1, lines(@request).size
+      assert_equal "xyz", lines(@request).first[2]
+    end
+
     private
 
     def lines(request)
